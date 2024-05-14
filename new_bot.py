@@ -7,7 +7,8 @@ from aiogram.types import Message             # ловим все обновле
 from aiogram.filters.command import Command   # обрабатываем команды /start, /help и другие
 
 
-logging.basicConfig(level=logging.INFO)
+# logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename='bot.log', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 TOKEN = os.getenv('TOKEN')
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
